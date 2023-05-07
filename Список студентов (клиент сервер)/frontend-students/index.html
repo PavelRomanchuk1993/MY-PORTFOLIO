@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студенты</title>
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <h1>Список студентов</h1>
+ <!--Создание формы для добавления студентов-->
+            <form action="#" id="add-student" class="mb-3 add-student">
+                <div class="mb-3 input-box">
+                    <input class="form-control input" data-min-length="2" type="text"  placeholder="Фамилия" id="input-surname">
+                </div>
+                <div class="mb-3 input-box">
+                    <input class="form-control input" data-min-length="2" type="text"  placeholder="Имя" id="input-name">
+                </div>
+                <div class="mb-3 input-box">
+                    <input class="form-control input" data-min-length="2" type="text"  placeholder="Отчество" id="input-lastname">
+                </div>
+                <div class="mb-3 input-box">
+                    <input class="form-control trainingstart input" type="number" placeholder="Начало обучения" id="input-trainingStart">
+                </div>
+                <div class="mb-3 input-box">
+                    <input class="form-control birthday input" type="date"  id="input-birthDate">
+                </div>
+                <div class="mb-3 input-box">
+                    <input class="form-control input" data-min-length="2" type="text"  placeholder="Факультет" id="input-faculty">
+                </div>
+               <button type="submit" class="btn btn-primary">Добавить</button>
+            </form>
+<!--Создание формы для фильтрации студентов-->
+            <form action="#" id="filter-form" class="mb-3">
+                <h2>Фильтрация</h2>
+                <input id="filter-form__fio-inp" class="form-control mb-3" type="text" placeholder="ФИО">
+                <input id="filter-form__faculte-inp" class="form-control mb-3" type="text" placeholder="Факультет">
+                <input id="filter-form__start-inp" class="form-control mb-3" type="number" placeholder="Год начала обучения">
+                <input id="filter-form__finish-inp" class="form-control mb-3" type="number" placeholder="Год окончания обучения">
+                <button type="submit" class="btn btn-primary">Фильтр</button>
+            </form>
+            <div id="list"></div>
+        </div>
+    </section>
+    <script defer type="module" src="JS/main.js"></script>
+</body>
+</html>
